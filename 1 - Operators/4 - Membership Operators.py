@@ -16,3 +16,8 @@ print('p' in 'python')
 print('a' in 'python')
 print('py' in 'python')
 print('pn' not in 'python')
+
+# test
+s = 'python'
+if ('p' in s) and ('n' in 'python'):
+    print("pn in python")
