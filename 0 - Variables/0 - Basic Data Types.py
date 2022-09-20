@@ -12,7 +12,7 @@ an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express o
 See the License for the specific language governing permissions and limitations under the License
 '''
 
-a = 1
+a = 1  # comment
 at = type(a)
 aID = id(a)
 b = 1.0
@@ -41,5 +41,18 @@ print("E:")
 print(e)
 print(et)
 
+
 # What's the type of "1"?
+print(type("1"))
+print(type(1))
+var = "1"
+print(var)
+print(type(var))
 # ToDo: Print Function with IDs too.
+test = 'bianco'
+testt = type(test)
+testID = id(test)
+print('TEST:')
+print(test)
+print(testt)
+print(testID)
