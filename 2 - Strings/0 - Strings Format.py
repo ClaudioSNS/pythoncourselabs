@@ -12,16 +12,23 @@ an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express o
 See the License for the specific language governing permissions and limitations under the License
 '''
 
-s = "hello"
-x = "Python"
-y = "!!!"
-
-print(s + " Python" + "!!!")
-print((s + ' ') * 3 + " Python" + "!" * 10)
-print("hello %(x)s%(y)s" % {"x": "Python", "y": "!!!"})
-print("hello {0}{1}".format(x, y))
-print("hello {1} {0}".format(x, y))
-print("hello {x}{y}".format(x="Pluto", y="???"))
-print(f"hello {x}{y}")
+# s = "hello"
+# x = "Python"
+# y = "!!!"
+#
+# print(s + " Python" + "!!!")
+# print((s + ' ') * 3 + " Python" + "!" * 10)
+# print("hello %(x)s%(y)s" % {"x": "Python", "y": "!!!"})
+# print("hello {0}{1}".format(x, y))
+# print("hello {1} {0}".format(x, y))
+# print("hello {x}{y}".format(x="Pluto", y="???"))
+# print(f"hello {x}{y}")
 
 # ToDO: Format strings coming from user inputs.
+nome=False
+cognome=False
+while not nome:
+    nome=input("Inserisci nome ").replace(" ","")
+while not cognome:
+    cognome=input("Inserisci cognome ").replace(" ","")
+print (f"L'utente è {nome.capitalize()} {cognome.capitalize()}")

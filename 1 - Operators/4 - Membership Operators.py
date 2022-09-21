@@ -12,12 +12,25 @@ an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express o
 See the License for the specific language governing permissions and limitations under the License
 '''
 
-print('p' in 'python')
-print('a' in 'python')
-print('py' in 'python')
-print('pn' not in 'python')
-
+# print('p' in 'python')
+# print('a' in 'python')
+# print('py' in 'python')
+# print('pn' not in 'python')
+#
 # test
-s = 'python'
-if ('p' in s) and ('n' in 'python'):
-    print("pn in python")
+# s = 'python'
+# if ('p' in s) and ('n' in 'python'):
+#     print("pn in python")
+
+from functools import reduce
+
+a = [1, 2, 3, 4]
+def sum(a1,a2):
+    return a1 + a2
+
+# for x in a:
+#     print(x)
+
+
+res = reduce(sum, a)
+print (res)
