@@ -95,15 +95,40 @@ def esplora2(d):
 
 # esplora2(x)
 
-def esplora3(d):
+# def esplora3(d):
+#     assert(isinstance(d, dict))
+#     for k, v in d.items():
+#         if isinstance(v, dict):
+#             if k == "public":
+#                 print(f"Key: {k} - Value: {v}")
+#             esplora3(v)
+#         else:
+#             if k == "public" or k == "email":
+#                 print(f"Key: {k} - Value: {v}")
+
+# esplora3(x)
+
+def esplora4(d, risultato =[]):
     assert(isinstance(d, dict))
     for k, v in d.items():
         if isinstance(v, dict):
             if k == "public":
-                print(f"Key: {k} - Value: {v}")
-            esplora3(v)
+                # print(f"Key: {k} - Value: {v}")
+                risultato.append(v)
+            esplora4(v, risultato)
         else:
             if k == "public" or k == "email":
-                print(f"Key: {k} - Value: {v}")
+                # print(f"Key: {k} - Value: {v}")
+                risultato.append(v)
 
-esplora3(x)
+r=[]
+esplora4(x,r)
+print(r)
+
+filename = "test.txt"
+try:
+    TestFile = open(filename, "w")
+    TestFile.write(str(r))
+    TestFile.close()
+except Exception as e:
+    print (f"Errore di scrittura su file : {e}")
